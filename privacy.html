@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy — LocalMind</title>
+<style>
+  :root {
+    --accent: #3b7ad9;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: rgba(60, 60, 67, 0.16);
+    --card: #f2f2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #6fa0ec;
+      --text: #ffffff;
+      --muted: rgba(235, 235, 245, 0.6);
+      --rule: rgba(84, 84, 88, 0.55);
+      --card: #1c1c1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 20px 20px 56px;
+    background: transparent;
+    color: var(--text);
+    font: 17px/1.5 -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif;
+    letter-spacing: -0.2px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 { font-size: 28px; line-height: 1.2; margin: 4px 0 6px; letter-spacing: -0.6px; }
+  h2 { font-size: 19px; line-height: 1.3; margin: 32px 0 8px; letter-spacing: -0.3px; }
+  h3 { font-size: 17px; margin: 20px 0 6px; }
+  p, li { margin: 10px 0; }
+  ul { padding-left: 20px; }
+  a { color: var(--accent); text-decoration: none; }
+  .meta { color: var(--muted); font-size: 13px; margin: 0 0 4px; }
+  .lead { color: var(--muted); font-size: 15px; margin-top: 0; }
+  .summary {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 18px 0 8px;
+    font-size: 15px;
+  }
+  .summary p { margin: 6px 0; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 32px 0 0; }
+  code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="meta">Effective 13 October 2026 · Last updated 13 October 2026</p>
+<p class="lead">LocalMind is an on-device AI chat app. It has no user accounts and no server of ours behind it.</p>
+
+<div class="summary">
+  <p><strong>The short version:</strong> your conversations, prompts and files stay on your device. We collect nothing, we run no analytics, and we have no way to read your chats.</p>
+</div>
+
+<h2>1. Information we collect</h2>
+<p><strong>None.</strong> LocalMind does not collect, transmit, sell or share personal information. There is no sign-up, no account, no email address required, no advertising identifier, and no third-party analytics or crash-reporting SDK embedded in the app.</p>
+<p>Because we collect nothing, there is nothing for us to hand over on request, and no data to delete on our side.</p>
+
+<h2>2. What is stored on your device</h2>
+<p>The app writes the following to its own storage. None of it is uploaded anywhere:</p>
+<ul>
+  <li><strong>Conversations and messages</strong>, including the instructions (system prompt) you set, stored in a local database inside the app.</li>
+  <li><strong>Settings</strong>, such as your default response length, creativity and prompt format.</li>
+  <li><strong>Model files</strong> you download, stored as <code>.gguf</code> files inside the app's Documents folder. These are large (a few hundred megabytes to several gigabytes) and are kept until you delete them in the app or delete the app.</li>
+  <li><strong>A local index</strong> of those model files, so the app does not have to re-read them on every launch.</li>
+</ul>
+<p>Deleting the app removes all of the above from your device. You can also delete individual models from the Models tab at any time.</p>
+
+<h2>3. Network connections</h2>
+<p>LocalMind uses the network for one purpose only: getting a model file that you asked for. There are exactly two kinds of request:</p>
+<ul>
+  <li><strong>Searching or browsing models.</strong> When you search in the app, your search text is sent to Hugging Face (<a href="https://huggingface.co">huggingface.co</a>) to return matching model repositories. When you open a model, the app asks Hugging Face for that repository's file list so it can pick the right file.</li>
+  <li><strong>Downloading a model.</strong> The model file is downloaded from Hugging Face (or the CDN it redirects to) when you tap Download, and saved to your device.</li>
+</ul>
+<p>These requests go directly from your device to Hugging Face. As with any web request, Hugging Face receives standard technical information such as your IP address and user agent, and processes it under <a href="https://huggingface.co/privacy">Hugging Face's own privacy policy</a>. We do not proxy these requests and we do not receive a copy of them, your search history, or any record of which model you downloaded.</p>
+<p><strong>Your conversations are never sent anywhere.</strong> Prompt text, replies, and the contents of any file you import are processed entirely on your device by a model running locally. Airplane mode disables every network feature of the app except downloading, and chatting still works.</p>
+
+<h2>4. Downloaded models and their publishers</h2>
+<p>Models are published by third parties (for example Alibaba, Google, Meta, Mistral AI, IBM, Microsoft, NVIDIA, Liquid AI and the Hugging Face community). A model file may include metadata such as its name, licence and prompt template, which the app displays to you. A model does not collect or transmit data — it runs locally. Your use of a model is governed by that model's own licence, which the app shows on each model's page with a link to the publisher's model card.</p>
+
+<h2>5. Your inputs to the model</h2>
+<p>Anything you type, paste or import goes to the local model only. Be aware that some models are capable of generating inaccurate, offensive or fabricated output; that output is produced on your device and is not reviewed by us. Do not rely on it for legal, medical, financial or safety-critical decisions without independent verification.</p>
+
+<h2>6. Children</h2>
+<p>LocalMind is not directed at children. It is rated 17+ because it can run language models that generate unrestricted text and can download models published by third parties.</p>
+
+<h2>7. Permissions and device access</h2>
+<p>The app requests no access to your camera, microphone, photos, contacts or location. The Files integration you may see (a LocalMind folder in the Files app, or the "Open in LocalMind" option) exists so you can import a model file you already own; the app only reads the file you select.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes, the revised version will be published with a new "last updated" date and shipped in an app update. Material changes will be noted in the update's release notes.</p>
+
+<h2>9. Contact</h2>
+<p>Questions about this policy, or a request relating to your data: <a href="mailto:gameworld614@gmail.com">gameworld614@gmail.com</a>.</p>
+
+<hr>
+<p class="meta">LocalMind · Copyright © 2026 Yongqing Zhu. Hugging Face, Llama, Gemma, Qwen, Mistral and other model names are trademarks of their respective owners and are used descriptively only.</p>
+
+</body>
+</html>
